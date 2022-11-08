@@ -30,7 +30,7 @@ def getFileLocation():
                                    "",
                                    "")
 
-    file_name = checkFileExistence("Enter current excel file name:\n", "File name does not exist. Try again", file_path,
+    file_name = checkFileExistence("Enter current excel file name: (name entered must be exactly like the file name)\n", "File name does not exist. Try again", file_path,
                                    ".xlsx")
 
     file_location = f"{file_path}\{file_name}.xlsx"

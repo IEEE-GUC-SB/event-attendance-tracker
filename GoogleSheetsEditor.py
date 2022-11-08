@@ -10,7 +10,7 @@ from oauth2client.service_account import ServiceAccountCredentials
 def getSheetName(obj, sheet_type):
     sheet_found = False
     while not sheet_found:
-        sheet_name = input(f"Enter google {sheet_type} name: \n")
+        sheet_name = input(f"Enter google {sheet_type} name: (name entered must be exactly like the spreadsheet name)\n")
         print("Please wait a few seconds .........")
         try:
             if sheet_type == "Spreadsheet":
@@ -39,7 +39,7 @@ def editMembersDataFromGSheets():
     data = DataFrame.from_dict(worksheet.get_all_records())
     editMembersData(data)
 
-    new_worksheet_name = input("Enter desired new worksheet name:\n")
+    new_worksheet_name = input("Enter desired new worksheet name: (name entered must be exactly like the worksheet name)\n")
     try:
         sheet.add_worksheet(rows=len(worksheet.get_all_records()) + 10, cols=10, title=new_worksheet_name)
     except gspread.exceptions.APIError:
