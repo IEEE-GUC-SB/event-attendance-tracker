@@ -10,7 +10,7 @@ from oauth2client.service_account import ServiceAccountCredentials
 def getSheetName(obj, sheet_type):
     sheet_found = False
     while not sheet_found:
-        sheet_name = input(f"Enter google {sheet_type} name: (name entered must be exactly like the spreadsheet name)\n")
+        sheet_name = input(f"Enter google {sheet_type} name: (name entered must be exactly like the {sheet_type} name)\n")
         print("Please wait a few seconds .........")
         try:
             if sheet_type == "Spreadsheet":
