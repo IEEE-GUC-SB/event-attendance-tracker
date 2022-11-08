@@ -20,6 +20,8 @@ def getSheetName(obj, sheet_type):
             return sheet_name
         except gspread.exceptions.SpreadsheetNotFound:
             print("Spreadsheet Name is not found. Try again")
+        except gspread.exceptions.APIError:
+            print("Spreadsheet Name is invalid. Try again")
         except google.auth.exceptions.TransportError:
             print("Internet Connection is very weak. Check your connection.")
         except requests.exceptions.ConnectionError:
@@ -40,6 +42,7 @@ def editMembersDataFromGSheets():
     editMembersData(data)
 
     new_worksheet_name = input("Enter desired new worksheet name: (name entered must be exactly like the worksheet name)\n")
+
     try:
         sheet.add_worksheet(rows=len(worksheet.get_all_records()) + 10, cols=10, title=new_worksheet_name)
     except gspread.exceptions.APIError:
