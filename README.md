@@ -10,6 +10,9 @@ $ pip install -r requirements.txt
 ## Usage
 ```
 $ python main.py
+Important Note: If you will edit an online google sheet of your, Don't forget to share this account 
+    ieee-qr@ieee-qr-367619.iam.gserviceaccount.com
+in your spreadsheet as an editor 
 ```
 ## Contributors
 - [Abdelrahman Saleh](https://github.com/AbdoRewaished)
