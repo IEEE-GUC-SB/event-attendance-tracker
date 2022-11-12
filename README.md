@@ -10,7 +10,8 @@ $ pip install -r requirements.txt
 ## Usage
 ```
 Firstly, you must get your own API Key so you can encode your data in qrcode urls.
-You can get an API Key from https://api.imgbb.com.
+You can get an API Key from 
+https://api.imgbb.com
 
 $ python main.py
     To get the full flow of the application
