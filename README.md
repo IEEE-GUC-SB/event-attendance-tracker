@@ -19,11 +19,11 @@ $ python main.py
 Important Note: If you will edit an online google sheet of yours, Don't forget to log in and register to get your credentials file
 and Put it inside the event-qrcode-generator file in your local system.
 
-in your spreadsheet as an editor 
-```
-$ python randomQRGenerator
 
+$ python randomQRGenerator
 To generate some random data in order to test how your results would exactly be
+```
+
 
 
 
