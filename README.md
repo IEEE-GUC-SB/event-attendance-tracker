@@ -22,7 +22,8 @@ and Put it inside the event-qrcode-generator file in your local system.
 in your spreadsheet as an editor 
 ```
 $ python randomQRGenerator
-    To generate some random data in order to test how your results would exactly be
+
+To generate some random data in order to test how your results would exactly be
 
 
 
