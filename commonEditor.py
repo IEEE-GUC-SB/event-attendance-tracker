@@ -1,10 +1,12 @@
-import imgbbpy
 import asyncio
-from Member import Member
+import os
+
+import imgbbpy
+
+from member import Member
 
 
-async def getImageURL(image_name):
-    api_key = '81d53054ed69fe81e4fb509d9d877649'
+async def getImageURL(image_name, api_key):
     client = imgbbpy.AsyncClient(api_key)
     image = await client.upload(file=image_name)
     return image.url
@@ -13,7 +15,7 @@ async def getImageURL(image_name):
 def getGeneratedsData(dataframe):
     generated_ids = []
     generated_qrcode_links = []
-
+    api_key = input("Enter your api_key:\n")
     for index, values in dataframe.iterrows():
         # creating a member from each row in Excel file
         member = Member(f"IEEE-{index + 1}",
@@ -29,9 +31,12 @@ def getGeneratedsData(dataframe):
         image_name = f"{member.name}.png"
         qrcode.png(image_name, "6")
         # generating an url for the png image we got
-        image_url = asyncio.run(getImageURL(image_name))
+
+        image_url = asyncio.run(getImageURL(image_name, api_key))
         # adding the image url
         generated_qrcode_links.append(image_url)
+        # remove the image file (not needed)
+        os.remove(image_name)
 
     return [generated_ids, generated_qrcode_links]
 

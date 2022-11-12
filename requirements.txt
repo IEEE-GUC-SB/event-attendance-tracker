@@ -3,14 +3,14 @@ pytz
 setuptools
 attrs
 pip
-Faker
+Faker~=15.2.0
 qrcode
 multidict
-gspread
+gspread~=5.6.2
 cachetools
 protobuf
 rsa
-oauth2client
+oauth2client~=4.1.3
 uritemplate
 async-timeout
 aiohttp
@@ -18,7 +18,7 @@ idna
 oauthlib
 openpyxl
 pyparsing
-requests
+requests~=2.28.1
 google-auth
 python-dateutil
 charset-normalizer
@@ -26,10 +26,10 @@ urllib3
 numpy
 six
 yarl
-pandas
+pandas~=1.5.1
 frozenlist
 requests-oauthlib
-PyQRCode
+PyQRCode~=1.2.1
 aiosignal
 et-xmlfile
 pypng
@@ -39,4 +39,4 @@ google-auth-oauthlib
 pyasn1
 colorama
 pyasn1-modules
-imgbbpy
+imgbbpy~=0.1.3

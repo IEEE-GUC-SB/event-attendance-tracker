@@ -1,19 +1,10 @@
-from LocalExcelEditor import editMembersDataFromExcel, generateRandomQRCodes
-from GoogleSheetsEditor import editMembersDataFromGSheets
+from googleSheetsEditor import editMembersDataFromGSheets
+from localExcelEditor import editMembersDataFromExcel
 
 choice = ""
-while choice.lower() != "y" and choice.lower() != "n":
-    choice = str(input("Would you like to use randomly generated values?:(Y/N)\n"))
-if choice.lower() == "y":
-    row_number = ""
-    while not isinstance(row_number, int):
-        row_number = int(input("How many rows of data would you like to generate?\n"))
-
-    generateRandomQRCodes(row_number)
-else:
-    choice = ""
-    while choice.lower() != "y" and choice.lower() != "n":
-        choice = str(input("Would you like to to update a google spreadsheet of users with QRCodes?:(Y/N)\n"))
+while choice.upper() not in ['Y', 'N']:
+    choice = input("If you'd like to edit a google sheet press 'Y'.\n"
+                   "If you'd like to edit a local excel file press 'N'.\n\n")
     if choice.lower() == "y":
         editMembersDataFromGSheets()
     else:
