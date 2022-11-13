@@ -1,7 +1,5 @@
 import os.path
-
 from pathlib import Path
-
 
 from pandas import read_excel, DataFrame
 
@@ -26,8 +24,7 @@ def getFilePath(request_message, warning_message, initial_path, end_point):
 
 
 def getFileLocation():
-    path_example = r"C:\Users\pc\Desktop"
-    file_path = getFilePath(f"Enter current excel local file path: (example: '{path_example}')\n",
+    file_path = getFilePath(f"Enter current excel local file path:\n",
                             "File path entered is Invalid. Try again",
                             "",
                             "")

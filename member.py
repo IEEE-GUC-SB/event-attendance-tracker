@@ -20,3 +20,6 @@ class Member:
         member_date = self.__str__()
         image = pyqrcode.create(member_date)
         return image
+
+
+member_attributes = ['ID', 'Name', 'Email', 'Phone Number', 'Participation As', 'QRCODE']

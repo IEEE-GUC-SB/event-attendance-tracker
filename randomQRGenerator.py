@@ -5,6 +5,7 @@ from pandas import DataFrame
 
 from commonEditor import editMembersData
 from localExcelEditor import storeEditedDataLocally
+from member import member_attributes
 
 fake = Faker()
 
@@ -22,7 +23,7 @@ def generateRandomLocalExcelFile() -> None:
     while not isinstance(row_number, int):
         row_number = int(input("\nHow many rows of data would you like to generate?\n"))
 
-    data = DataFrame(columns=['Name', 'Email', 'Phone Number', 'Participation As'])
+    data = DataFrame(columns=member_attributes)
     for i in range(row_number):
         data.loc[len(data.index)] = [fake.name(), fake.email(), fake_phone_number(), fake_participation_state()]
     editMembersData(data)

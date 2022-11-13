@@ -5,6 +5,7 @@ from oauth2client.service_account import ServiceAccountCredentials
 from pandas import DataFrame
 
 from commonEditor import editMembersData
+from member import member_attributes
 
 
 def getSheetName(client, sheet, sheet_type):
@@ -64,7 +65,7 @@ def createNewWorksheet(sheet, worksheet):
     qr_worksheet = sheet.worksheet(new_worksheet_name)
 
     qr_worksheet.insert_rows(
-        DataFrame([['ID', 'Name', 'Email', 'Phone Number', 'Participation As', 'QRCODE']]).values.tolist())
+        DataFrame([member_attributes]).values.tolist())
     qr_worksheet.insert_rows(data.values.tolist(), row=2)
 
 
