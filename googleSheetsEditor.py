@@ -38,8 +38,7 @@ def getClient():
     try:
         creds = ServiceAccountCredentials.from_json_keyfile_name(creds_file_name, scope)
     except FileNotFoundError:
-        print("\nPlease enter the correct file name or download it if it doesn't exist\n")
-        return None
+        print("\nPlease enter the correct file name or download it if it doesn't exist\n\n")
 
     return gspread.authorize(creds)
 

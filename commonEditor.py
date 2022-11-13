@@ -12,13 +12,16 @@ async def getImageURL(image_name, api_key):
     return image.url
 
 
+starting_id_number = 100
+
+
 def getGeneratedsData(dataframe):
     generated_ids = []
     generated_qrcode_links = []
     api_key = input("Enter your api_key:\n")
     for index, values in dataframe.iterrows():
         # creating a member from each row in Excel file
-        member = Member(f"IEEE-{index + 1}",
+        member = Member(f"IEEE-{index + starting_id_number}",
                         values["Name"],
                         values["Email"],
                         values["Phone Number"],
