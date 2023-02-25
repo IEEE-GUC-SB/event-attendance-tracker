@@ -1,1 +1,1 @@
-Event Attendance Tracker
+# Event Attendance Tracker
